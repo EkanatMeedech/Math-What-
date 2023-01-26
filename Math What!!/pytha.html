@@ -1,0 +1,78 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="pytha-style.css">
+    <title>Pythagorean</title>
+</head>
+
+<body>
+    <div class="container bg">
+        <div class="navBar">
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fa-solid fa-calculator" style="text-shadow: 1px 1px 2px pink; font-size: 3rem;"> Math What!</i>
+                </a>
+            </div>
+            <ul>
+                <li><a href="index.html" style="text-shadow: 1px 1px 2px pink;">Home</a></li>
+                <li><a href="index.html" style="text-shadow: 1px 1px 2px pink;">About</a></li>
+                <li><a href="index.html" style="text-shadow: 1px 1px 2px pink;">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="grid">
+            <div class="choose">
+                <div class="select-img">
+                    <img src="img/pythagorean02.png" alt="">
+                </div>
+                <div class="select">
+                    <h2>ต้องการหาด้านไหน</h2>
+                    <div class="radio-find" id="radio-find">
+                        <input class="radio-input" type="radio" id="find-a" name="pytha-find" value="a" onchange="storeSelectedValue()">
+                        <label for="find-a" style="font-size: 1rem;">หาค่า A</label><br><br>
+                        <input class="radio-input" type="radio" id="find-b" name="pytha-find" value="b" onchange="storeSelectedValue()">
+                        <label for="find-a" style="font-size: 1rem;">หาค่า B</label><br><br>
+                        <input class="radio-input" type="radio" id="find-c" name="pytha-find" value="c" onchange="storeSelectedValue()">
+                        <label for="find-a" style="font-size: 1rem;">หาค่า C</label><br><br>
+                    </div>
+                    <div class="radio-find"></div>
+                    <div class="radio-find"></div>
+                </div>
+            </div>
+            <div class="input">
+                <h2 class="input-text">กรอกค่ายกเว้นค่าที่ต้องการหา</h2>
+                <div class="var-a">
+                    กรอกค่า A<br>
+                    <input type="number" class="input-number" id="input-a">
+                </div>
+                <div class="var-b">
+                    กรอกค่า B<br>
+                    <input type="number" class="input-number" id="input-b">
+                </div>
+                <div class="var-c">
+                    กรอกค่า C <br>
+                    <input type="number" class="input-number" id="input-c">
+                </div>
+                <div class="let-go">
+                    <button class="button-17" role="button" onclick="calculate()">Calculate</button>
+                </div>
+            </div>
+            <div class="show">
+                <h1 class="display">แสดงผล</h1>
+                <h2 id="text-value" class="display" style="margin-top: 50px;"></h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="pytha-script.js"></script>
+</body>
+
+</html>

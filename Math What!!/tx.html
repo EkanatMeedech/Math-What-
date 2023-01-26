@@ -1,0 +1,63 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/bootstrap.min.js">
+    <link rel="stylesheet" href="tx-style.css">
+    <title>Calculate Taxes</title>
+</head>
+
+<body>
+    <div class="container bg">
+        <div class="navBar">
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fa-solid fa-calculator" style="text-shadow: 1px 1px 2px pink; font-size: 3rem;"> Math What!</i>
+                </a>
+            </div>
+            <ul>
+                <li><a href="index.html" style="text-shadow: 1px 1px 2px pink;">Home</a></li>
+                <li><a href="index.html" style="text-shadow: 1px 1px 2px pink;">About</a></li>
+                <li><a href="index.html" style="text-shadow: 1px 1px 2px pink;">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container"
+        style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin-top: 30px;border-radius: 12px;border: 2px solid black; background-color: white;">
+        <h1 style="margin-top: 10px;">Calculate Taxes Program</h1>
+        <div class="container" style="margin-bottom: 10px;">
+            <div class="grid">
+                <div class="input-number">
+                    <h3 style="text-align: center;">ราคาสินค้า</h3>
+                    <div class="form-outline">
+                        <input type="number" id="number-input" class="form-control" />
+                    </div>
+                </div>
+                <div class="select-type-tax">
+                    <input class="form-check-input" type="radio" name="type-tax" id="before-vat" value="before-vat" onchange="changeType('before-vat')">
+                    <label for="before-vat">ราคาก่อน VAT</label><br>
+                    <input class="form-check-input" type="radio" name="type-tax" id="total-vat" value="total-vat" onchange="changeType('total-vat')">
+                    <label for="total-vat">ราคารวม VAT</label><br>
+                    <p>ภาษีมูลค่าเพิ่ม (VAT) <input type="number" id="vat-percent" value="7" style="width: 30px; text-align: center; border-radius: 5px;"> %  (ค่าเริ่มต้นที่ 7)</p>
+                    <button onclick="test()" class="btn btn-success">คำนวณ</button>
+                </div>
+                <div class="result-tax-all">
+                    <div class="price-number" style="font-size: 25px;" id="price-number"></div>
+                    <div class="vat-number" style="font-size: 25px;" id="vat-number"></div>
+                    <div class="price-final" style="font-size: 25px;" id="price-final"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="tx-script.js"></script>
+</body>
+
+</html>

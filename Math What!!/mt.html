@@ -1,0 +1,52 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/bootstrap.min.js">
+    <link rel="stylesheet" href="mt-style.css">
+    <title>Multiplication</title>
+    
+</head>
+
+<body>
+    <div class="container bg">
+        <div class="navBar">
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fa-solid fa-calculator" style="text-shadow: 1px 1px 2px pink; font-size: 3rem;"> Math What!</i>
+                </a>
+            </div>
+            <ul>
+                <li><a href="index.html" style="text-shadow: 1px 1px 2px pink;">Home</a></li>
+                <li><a href="index.html" style="text-shadow: 1px 1px 2px pink;">About</a></li>
+                <li><a href="index.html" style="text-shadow: 1px 1px 2px pink;">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="container" style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin-top: 30px;border-radius: 12px;border: 2px solid black; background-color: white;">
+        <h1>Multiplication Table Program</h1><br>
+        <h3>Enter the required number</h3><br>
+        <input type="number" id="input-number" class="form-control" style="border: 2px solid black;" /><br><br>
+        <button onclick="genMT()" class="btn btn-primary">Submit</button><br><br>
+        <div class="container" style="border-radius: 12px;border: 2px solid rgb(110, 110, 110);display: flex;justify-content: center;align-items: center;margin-bottom: 10px;">
+            <p id="result">
+                
+            </p>
+        </div>
+    </div>
+
+    <script src="mt-script.js"></script>
+</body>
+
+</html>

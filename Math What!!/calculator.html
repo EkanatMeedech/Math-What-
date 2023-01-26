@@ -1,0 +1,85 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/bootstrap.min.js">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator-style.css">
+</head>
+ 
+<body>
+    <div class="container bg">
+        <div class="navBar">
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fa-solid fa-calculator" style="text-shadow: 1px 1px 2px pink; font-size: 3rem;"> Math What!</i>
+                </a>
+            </div>
+            <ul>
+                <li><a href="index.html" style="text-shadow: 1px 1px 2px pink;">Home</a></li>
+                <li><a href="index.html" style="text-shadow: 1px 1px 2px pink;">About</a></li>
+                <li><a href="index.html" style="text-shadow: 1px 1px 2px pink;">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container" style="display: flex; flex-direction: column; align-items: center;">
+
+    <p style="text-shadow: 1px 1px 2px pink; font-size: 3rem;">Calculator Program</p>
+
+
+    <div class="calculator">
+
+        <div class="display-all">
+            <div class="display-before">
+                <p id="display-before"></p>
+            </div>
+            <div class="display-af">
+                <p id="display"></p>
+            </div>
+        </div>
+        <div class="button">
+            <div class="row">
+                <button class="button-clear" onclick="click_clear()">C</button>
+                <button class="operator" onclick="addToDisplay('(')">(</button>
+                <button class="operator" onclick="addToDisplay(')')">)</button>
+                <button class="operator" onclick="addToDisplay('/')">/</button>
+            </div>
+            <div class="row">
+                <button class="button-number" onclick="addToDisplay('7')">7</button>
+                <button class="button-number" onclick="addToDisplay('8')">8</button>
+                <button class="button-number" onclick="addToDisplay('9')">9</button>
+                <button class="operator" onclick="addToDisplay('*')">x</button>
+            </div>
+            <div class="row">
+                <button class="button-number" onclick="addToDisplay('4')">4</button>
+                <button class="button-number" onclick="addToDisplay('5')">5</button>
+                <button class="button-number" onclick="addToDisplay('6')">6</button>
+                <button class="operator" onclick="addToDisplay('-')">-</button>
+            </div>
+            <div class="row">
+                <button class="button-number" onclick="addToDisplay('1')">1</button>
+                <button class="button-number" onclick="addToDisplay('2')">2</button>
+                <button class="button-number" onclick="addToDisplay('3')">3</button>
+                <button class="operator" onclick="addToDisplay('+')">+</button>
+            </div>
+            <div class="row">
+                <button class="button-number" onclick="addToDisplay('0')">0</button>
+                <button class="button-number" onclick="addToDisplay('.')">.</button>
+                <button class="operator" onclick="click_equal()">=</button>
+                <button class="operator" onclick="deleteText()"><</button>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+    <script src="calculator-javascript.js"></script>
+</body>
+
+</html>
